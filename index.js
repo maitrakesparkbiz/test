@@ -16,6 +16,10 @@ const io = socketIO(server, {
   },
 });
 
+app.get("/", (req, res) => {
+  res.send("Express on Vercel");
+});
+
 io.on("connection", (socket) => {
   console.log("A user connected");
 
